@@ -29,9 +29,9 @@ Before entering the battle you should know that the weather in our kingdom can b
 <h3><b>What should I do to start the game?</b></h3>
 Firstly you should install GoLang into your machine(I will assume that you already did that).
 then execute the following commands:
-```
-go get https://github.com/alionas3/DragonsOfMugloar
+`
+go get github.com/alionas3/DragonsOfMugloar
 go build DragonsOfMugloar
 go install DragonsOfMugloar
-```
+`
 Have Fun!!!
