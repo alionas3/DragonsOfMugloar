@@ -8,10 +8,10 @@ This game is about medieval times when the dragons where still alive and knights
 <h3><b>What is the purpose of this game?</b></h3>
 
 You play as a Head of Dragon Resource Management and as you may know, knights always trying to attack your kingdom and take the princess, so your main goal is to keep your kingdom and dragon(especially dragons) always alive by selectively assigning 20 points to 4 skills for your dragon which are:
-**Scale thickness** 
-**Claw sharpness**
-**Wing strength**
-**Fire breath**
+<br />**Scale thickness** 
+<br />**Claw sharpness**
+<br />**Wing strength**
+<br />**Fire breath**
 <h3><b>That sounds easy, lets get started!!!</b></h3>
 
 Before entering the battle you should know that the weather in our kingdom can be pretty hectic, so keep in mind couple of things:
