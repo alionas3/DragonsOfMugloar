@@ -17,9 +17,13 @@ You play as a Head of Dragon Resource Management and as you may know, knights al
 Before entering the battle you should know that the weather in our kingdom can be pretty hectic, so keep in mind couple of things:
 
 **Normal weather**  normal fights
+
 **Storm**  everyone dies
+
 **Heavy rain with floods** knights come by boats with umbrella, so the fire is useless in the rain and additional claw sharpening is needed to destroy the boats with umbrellas
+
 **The long dry**  Only the ZENNEST dragons who have achieved great balance of their inner-self through meditation can win battles during the drought!
+
 **Fog** All dragons come with excellent knight-locating skills, no puny fog can change that. The knights dragon-locating skills, however are limited to understanding whether or not they have already been eaten.
 
 <h3><b>What should I do to start the game?</b></h3>
