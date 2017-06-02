@@ -5,7 +5,6 @@ import (
 	"io/ioutil"
 	"encoding/json"
 )
-
 type Game struct{
 	GameId int `json:"gameId"`
 	Knight struct {
@@ -16,7 +15,11 @@ type Game struct{
 		       Endurance int `json:"endurance"`
 	       }`json:"knight"`
 }
-
+/*
+  This function call the game api, parses response to json and returns GAME object
+  %param: accepts no parameters
+  #returns: GAME object
+*/
 func GetGame()(Game) {
 	game := Game{}
 	response, error := http.Get("http://www.dragonsofmugloar.com/api/game")

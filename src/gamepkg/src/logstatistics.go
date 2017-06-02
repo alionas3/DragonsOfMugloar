@@ -6,7 +6,13 @@ import (
 	"io/ioutil"
 	"fmt"
 )
-
+/*
+  This function calculates, writes statistics to file and prints the result
+  %param btlWon    - int, won battles
+  %param btlLost   - int, lost battles
+  %param totalBtls - int, total battles
+  #returns: does not return anything
+*/
 func LogStatistics(btlWon int, btlLost int,totalBtls int){
 
 	file, error := os.Create("BattleOfMugloarResult.txt")

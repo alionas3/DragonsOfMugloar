@@ -5,7 +5,11 @@ import (
 	"gamepkg/src"
 	"github.com/cheggaaa/pb"
 )
-
+/*
+  This function start the game
+  %params - accepts no parameters
+  #returns - does not return anything
+*/
 func StartBattle() {
 	var totalBtls  int = 0
 	var btlWon  int = 0
@@ -26,6 +30,7 @@ func StartBattle() {
 	bar.SetWidth(50)
 	bar.Start()
 	for cnt < totalBtls {
+		//gets the game
 		game := gamepkg.GetGame()
 		//gets battle weather
 		weather := gamepkg.GetWeather(game.GameId)

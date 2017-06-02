@@ -1,8 +1,6 @@
 package gamepkg
 
-import (
-	"encoding/json"
-)
+import "encoding/json"
 
 type Dragon struct{
 	Strengths struct {
@@ -12,7 +10,12 @@ type Dragon struct{
 			  FireBreath     int `json:"fireBreath"`
 		  }`json:"dragon"`
 }
-
+/*
+  This function creates dragon json for resolveapi.go
+  %param game - GAME, created game from gameapi.go
+  %param weather - WEATHER, weather obj from weatherapi.go
+  #returns: string - parsed DRAGON json
+*/
 func CreateDragon(game Game, weather Weather)(string) {
 	dragon := Dragon{}
 	var SendDragon   string = "Y"
@@ -44,7 +47,11 @@ func CreateDragon(game Game, weather Weather)(string) {
 	}
 	return dragonString
 }
-
+/*
+  This function assigns dragon skill for normal weather
+  %param game - GAME, accepts game from GAMEAPI
+  #returns: dragon - DRAGON with assigned skills
+*/
 func getNormalDragon(game Game)(Dragon) {
 	dragon := Dragon{}
 	var maxKnightKey string = ""
@@ -103,13 +110,11 @@ func getNormalDragon(game Game)(Dragon) {
 			}
 		}
 	}
-
 	if minKnightKey == "Attack" {
 		dragon.Strengths.ScaleThickness = 20 - (dragon.Strengths.FireBreath   +
 			dragon.Strengths.WingStrength +
 			dragon.Strengths.ClawSharpness)
 	} else if minKnightKey == "Armor" {
-
 		dragon.Strengths.ClawSharpness  = 20 - (dragon.Strengths.FireBreath    +
 			dragon.Strengths.WingStrength  +
 			dragon.Strengths.ScaleThickness)

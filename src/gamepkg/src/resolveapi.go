@@ -7,12 +7,17 @@ import (
 	"io/ioutil"
 	"encoding/json"
 )
-
 type Result struct{
 	Status  string `json:"status"`
 	Message string `json:"message"`
 }
-
+/*
+  This function calls solution api and solves the battle
+  %param dragon - string, parsed dragon json
+  %param gameId - int, game code from gameapi
+  #returns: Status - string, status of the resolved bttle
+  	    Message - string, message of the resolved battle
+*/
 func ResolveBattle(dragon string, gameId int)(string, string){
 	result := Result{}
 	var url string = "http://www.dragonsofmugloar.com/api/game/"+strconv.Itoa(gameId)+"/solution"
