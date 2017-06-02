@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;DragonsOfMugloar&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../src/BattleOfMugloar" />
+      <root url="file://$PROJECT_DIR$/../src/github.com" />
+      <root url="file://$PROJECT_DIR$/../src/gotutorial" />
+      <root url="file://$PROJECT_DIR$/../src/.idea" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../src/BattleOfMugloar" />
+      <root url="file://$PROJECT_DIR$/../src/github.com" />
+      <root url="file://$PROJECT_DIR$/../src/gotutorial" />
+      <root url="file://$PROJECT_DIR$/../src/.idea" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

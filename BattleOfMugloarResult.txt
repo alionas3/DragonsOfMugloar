@@ -1,0 +1,3 @@
+Battles won: 3
+Battles lost:0
+Won percentage: 100%
