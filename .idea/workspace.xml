@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="08250787-7e6c-46b3-92ba-cd970a19c05d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/kless/term" afterPath="$PROJECT_DIR$/src/github.com/kless/term" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,10 +15,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="game.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="game.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gamepkg/game.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
+            <state relative-caret-position="414">
               <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
               <folding>
                 <element signature="e#17#75#0" expanded="true" />
@@ -40,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dragon.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dragon.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gamepkg/src/dragon.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="1232">
               <caret line="111" column="9" lean-forward="true" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
               <folding />
             </state>
@@ -748,11 +748,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamepkg/src/dragon.go">
+    <entry file="file://$PROJECT_DIR$/src/gamepkg/game.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="111" column="9" lean-forward="true" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="414">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding>
+            <element signature="e#17#75#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -767,13 +769,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamepkg/game.go">
+    <entry file="file://$PROJECT_DIR$/src/gamepkg/src/dragon.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding>
-            <element signature="e#17#75#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1232">
+          <caret line="111" column="9" lean-forward="true" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
