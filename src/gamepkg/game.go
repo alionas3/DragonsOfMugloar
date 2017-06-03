@@ -8,7 +8,6 @@ import (
 	"os"
 	"sync"
 	"time"
-	//"log"
 )
 /*
   This function start the game
@@ -62,8 +61,7 @@ func StartBattle() {
 	wg.Wait()//waits for all go routines to finish
 	bar.FinishPrint("All Battles Finished!")
 	elapsed := time.Since(start)//gets the elapsed time of go routines
-	fmt.Println("All battles finished in:", elapsed)
-	gamepkg.LogStatistics(btlWon,btlLost,totalBtls)
+	gamepkg.LogStatistics(btlWon,btlLost,totalBtls,elapsed)
 	buf := bufio.NewReader(os.Stdin)
 	fmt.Print("Press ENTER to exit...")
 	sentence, err := buf.ReadBytes('\n')
