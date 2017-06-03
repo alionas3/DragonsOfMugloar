@@ -64,11 +64,12 @@ func getNormalDragon(game Game)(Dragon) {
 	 minKnightStat int
 	 cnt 	  int = 0
 	)
-	knightMap := make(map[string]int)
-	knightMap["Attack"]    = game.Knight.Attack
-	knightMap["Armor"]     = game.Knight.Armor
-	knightMap["Agility"]   = game.Knight.Agility
-	knightMap["Endurance"] = game.Knight.Endurance
+	knightMap := map[string]int{
+		"Attack"   : game.Knight.Attack,
+		"Armor"    : game.Knight.Armor,
+		"Agility"  : game.Knight.Agility,
+		"Endurance": game.Knight.Endurance,
+	}
 	//assume that the first value is the smallest
 	maxKnightStat := knightMap["Armor"]
 	//gets maximum Knight skill and minimum Knight skill

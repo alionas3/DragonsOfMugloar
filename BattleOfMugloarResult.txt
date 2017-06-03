@@ -1,3 +1,3 @@
-Battles won: 100
+Battles won: 34
 Battles lost:0
 Won percentage: 100%
