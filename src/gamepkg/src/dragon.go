@@ -19,23 +19,27 @@ type Dragon struct{
 func CreateDragon(game Game, weather Weather)(string) {
 	dragon := Dragon{}
 	var SendDragon   string = "Y"
+	switch weather.Code {
 	//Heavy rain, knights comes with umbrella boats
-	if weather.Code == "HVA"{
+	case "HVA":
 		dragon.Strengths.ScaleThickness = 5
 		dragon.Strengths.ClawSharpness  = 10
 		dragon.Strengths.WingStrength   = 5
 		dragon.Strengths.FireBreath     = 0
-		//Long dry, need to balance dragon skills
-	}else if weather.Code == "T E"{
+	//Long dry, need to balance dragon skills
+	case "T E":
 		dragon.Strengths.ScaleThickness = 5
 		dragon.Strengths.ClawSharpness  = 5
 		dragon.Strengths.WingStrength   = 5
 		dragon.Strengths.FireBreath     = 5
-		//Storm, do not send dragon to battle
-	}else if weather.Code == "SRO"{
+	//Storm, do not send dragon to battle
+	case "SRO":
 		SendDragon = "N"
-		//Normal weather, normal battles
-	}else if weather.Code == "NMR" || weather.Code == "FUNDEFINEDG"{
+	//Normal weather, normal battles
+	case "NMR" :
+		dragon = getNormalDragon(game)
+	//Fog, knights, dragon locating skills reduce
+	case "FUNDEFINEDG" :
 		dragon = getNormalDragon(game)
 	}
 	dragonJson, error := json.Marshal(dragon)
@@ -54,10 +58,12 @@ func CreateDragon(game Game, weather Weather)(string) {
 */
 func getNormalDragon(game Game)(Dragon) {
 	dragon := Dragon{}
-	var maxKnightKey string = ""
-	var minKnightKey string = ""
-	var minKnightStat int
-	var cnt 	  int = 0
+	var(
+	 maxKnightKey string = ""
+	 minKnightKey string = ""
+	 minKnightStat int
+	 cnt 	  int = 0
+	)
 	knightMap := make(map[string]int)
 	knightMap["Attack"]    = game.Knight.Attack
 	knightMap["Armor"]     = game.Knight.Armor
@@ -87,47 +93,42 @@ func getNormalDragon(game Game)(Dragon) {
 		cnt = cnt + 1
 	}
 	//assigns max Knight stat to dragon
-	if maxKnightKey == "Armor" {
-		dragon.Strengths.ClawSharpness 	= maxKnightStat
-	} else if maxKnightKey == "Attack" {
-		dragon.Strengths.ScaleThickness = maxKnightStat
-	} else if maxKnightKey == "Agility" {
-		dragon.Strengths.WingStrength 	= maxKnightStat
-	} else if maxKnightKey == "Endurance" {
-		dragon.Strengths.FireBreath 	= maxKnightStat
+	switch maxKnightKey {
+	case "Armor"     : dragon.Strengths.ClawSharpness  = maxKnightStat
+	case "Attack"    : dragon.Strengths.ScaleThickness = maxKnightStat
+	case "Agility"   : dragon.Strengths.WingStrength   = maxKnightStat
+	case "Endurance" : dragon.Strengths.FireBreath 	   = maxKnightStat
 	}
 	//assigns lowest Knight points to dragon
 	for key, value := range knightMap {
 		if value != 0 {
-			if key == "Armor" {
-				dragon.Strengths.ClawSharpness = value - 1
-			} else if key == "Attack" {
-				dragon.Strengths.ScaleThickness = value - 1
-			} else if key == "Agility" {
-				dragon.Strengths.WingStrength = value - 1
-			} else if key == "Endurance" {
-				dragon.Strengths.FireBreath = value - 1
+			switch key {
+			case "Armor"    : dragon.Strengths.ClawSharpness  = value - 1
+			case "Attack"   : dragon.Strengths.ScaleThickness = value - 1
+			case "Agility"  : dragon.Strengths.WingStrength   = value - 1
+			case "Endurance": dragon.Strengths.FireBreath     = value - 1
 			}
 		}
 	}
-	if minKnightKey == "Attack" {
+	//assigns left balance to dragon
+	switch minKnightKey{
+	case "Attack":
 		dragon.Strengths.ScaleThickness = 20 - (dragon.Strengths.FireBreath   +
-			dragon.Strengths.WingStrength +
-			dragon.Strengths.ClawSharpness)
-	} else if minKnightKey == "Armor" {
+							dragon.Strengths.WingStrength +
+							dragon.Strengths.ClawSharpness)
+	case "Armor":
 		dragon.Strengths.ClawSharpness  = 20 - (dragon.Strengths.FireBreath    +
-			dragon.Strengths.WingStrength  +
-			dragon.Strengths.ScaleThickness)
-
-	} else if minKnightKey == "Agility" {
+							dragon.Strengths.WingStrength  +
+							dragon.Strengths.ScaleThickness)
+	case "Agility":
 		dragon.Strengths.WingStrength   = 20 - (dragon.Strengths.FireBreath    +
-			dragon.Strengths.ClawSharpness +
-			dragon.Strengths.ScaleThickness)
-
-	} else if minKnightKey == "Endurance" {
+							dragon.Strengths.ClawSharpness +
+							dragon.Strengths.ScaleThickness)
+	case "Endurance":
 		dragon.Strengths.FireBreath     = 20 - (dragon.Strengths.WingStrength  +
-			dragon.Strengths.ClawSharpness +
-			dragon.Strengths.ScaleThickness)
+							dragon.Strengths.ClawSharpness +
+							dragon.Strengths.ScaleThickness)
+
 	}
 	return dragon
 }

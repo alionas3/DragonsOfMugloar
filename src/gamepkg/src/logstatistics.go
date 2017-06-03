@@ -14,7 +14,6 @@ import (
   #returns: does not return anything
 */
 func LogStatistics(btlWon int, btlLost int,totalBtls int){
-
 	file, error := os.Create("BattleOfMugloarResult.txt")
 	checkErr(error)
 	defer file.Close()

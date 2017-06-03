@@ -19,9 +19,11 @@ type Result struct{
   	    Message - string, message of the resolved battle
 */
 func ResolveBattle(dragon string, gameId int)(string, string){
-	result := Result{}
-	var url string = "http://www.dragonsofmugloar.com/api/game/"+strconv.Itoa(gameId)+"/solution"
-	var jsonDragon = []byte(dragon)
+	var(
+	    result     = Result{}
+	    url        = "http://www.dragonsofmugloar.com/api/game/"+strconv.Itoa(gameId)+"/solution"
+	    jsonDragon = []byte(dragon)
+	)
 	req, error := http.NewRequest("PUT", url,bytes.NewBuffer(jsonDragon))
 	checkErr(error)
 	req.Header.Set("Content-Type", "application/json")

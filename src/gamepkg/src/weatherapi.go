@@ -12,8 +12,10 @@ type Weather struct{
 }
 
 func GetWeather(gameId int)(Weather) {
-	weather := Weather{}
-	var url string = "http://www.dragonsofmugloar.com/weather/api/report/" + strconv.Itoa(gameId)
+	var(
+	    weather = Weather{}
+	    url     = "http://www.dragonsofmugloar.com/weather/api/report/" + strconv.Itoa(gameId)
+	)
 	response, error := http.Get(url)
 	checkErr(error)
 	defer response.Body.Close()

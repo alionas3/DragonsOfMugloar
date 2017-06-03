@@ -11,11 +11,13 @@ import (
   #returns - does not return anything
 */
 func StartBattle() {
-	var totalBtls  int = 0
-	var btlWon  int = 0
-	var btlLost int = 0
-	var dragon string
-	fmt.Println("How many battles would you like to play?:")
+	var(
+	    totalBtls int = 0
+	    btlWon    int = 0
+	    btlLost   int = 0
+	    dragon    string = ""
+	)
+	fmt.Print("How many battles would you like to play?:")
 	_,error := fmt.Scanf("%d", &totalBtls)
 	if error != nil {
 		fmt.Println("Please enter valid battle number.")
