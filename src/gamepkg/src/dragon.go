@@ -1,6 +1,9 @@
 package gamepkg
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"fmt"
+)
 
 type Dragon struct{
 	Strengths struct {
@@ -16,7 +19,7 @@ type Dragon struct{
   %param weather - WEATHER, weather obj from weatherapi.go
   #returns: string - parsed DRAGON json
 */
-func CreateDragon(game Game, weather Weather)(string) {
+func CreateDragon(game Game, weather Weather)(dragonString string) {
 	dragon := Dragon{}
 	var SendDragon   string = "Y"
 	switch weather.Code {
@@ -43,21 +46,21 @@ func CreateDragon(game Game, weather Weather)(string) {
 		dragon = getNormalDragon(game)
 	}
 	dragonJson, error := json.Marshal(dragon)
-	dragonString := string(dragonJson)
+	dragonString = string(dragonJson)
 	checkErr(error)
 	//do not send dragon to battle
 	if SendDragon == "N"{
 		dragonString = ""
 	}
-	return dragonString
+	return
 }
 /*
   This function assigns dragon skill for normal weather
   %param game - GAME, accepts game from GAMEAPI
   #returns: dragon - DRAGON with assigned skills
 */
-func getNormalDragon(game Game)(Dragon) {
-	dragon := Dragon{}
+func getNormalDragon(game Game)(dragon Dragon) {
+	dragon = Dragon{}
 	var(
 	 maxKnightKey string = ""
 	 minKnightKey string = ""
@@ -131,5 +134,28 @@ func getNormalDragon(game Game)(Dragon) {
 							dragon.Strengths.ScaleThickness)
 
 	}
-	return dragon
+
+	defer checkDragonPoints(dragon.Strengths.ScaleThickness,
+			        dragon.Strengths.FireBreath,
+			        dragon.Strengths.WingStrength,
+			        dragon.Strengths.ClawSharpness)
+	return
+}
+/*
+  This function checks if dragon points are not more than 20
+*/
+func checkDragonPoints(args ...int){
+	total := 0
+	for _, v := range args {
+		total += v
+	}
+	defer func() {
+		str := recover()
+		if str != nil {
+			fmt.Println(str)
+		}
+	}()
+	if total > 20 {
+		panic("Dragon has more than 20 points!!!")
+	}
 }
