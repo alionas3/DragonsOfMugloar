@@ -1,6 +1,8 @@
 package main
 
-import "gamepkg"
+import (
+	"gamepkg"
+)
 /*
   This is the main function for game "Dragons of Mugloar" solution which could be found at: www.dragonsofmugloar.com
   author: Alius Nedzinskas
