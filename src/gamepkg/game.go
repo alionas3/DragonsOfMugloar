@@ -45,7 +45,6 @@ func StartBattle() {
 			game := gamepkg.GetGame()
 			//gets battle weather
 			weather := gamepkg.GetWeather(game.GameId)
-			fmt.Println(weather)
 			//creates dragon
 			dragon = gamepkg.CreateDragon(game, weather)
 			//resolves battle
