@@ -16,17 +16,17 @@ type Game struct{
 	       }`json:"knight"`
 }
 /*
-  This function call the game api, parses response to json and returns GAME object
+  This function calls the game api, parses response to json and returns GAME object
   %param: accepts no parameters
   #returns: GAME object
 */
-func GetGame()(Game) {
-	game := Game{}
+func GetGame()(game Game) {
+	game = Game{}
 	response, error := http.Get("http://www.dragonsofmugloar.com/api/game")
 	checkErr(error)
 	defer response.Body.Close()
 	jsonData, error := ioutil.ReadAll(response.Body)
 	json.Unmarshal([]byte(jsonData),&game)
 	checkErr(error)
-	return game
+	return
 }

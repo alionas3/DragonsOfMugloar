@@ -62,10 +62,10 @@ func CreateDragon(game Game, weather Weather)(dragonString string) {
 func getNormalDragon(game Game)(dragon Dragon) {
 	dragon = Dragon{}
 	var(
-	 maxKnightKey string = ""
-	 minKnightKey string = ""
+	 maxKnightKey  string = ""
+	 minKnightKey  string = ""
 	 minKnightStat int
-	 cnt 	  int = 0
+	 cnt 	       int = 0
 	)
 	knightMap := map[string]int{
 		"Attack"   : game.Knight.Attack,
