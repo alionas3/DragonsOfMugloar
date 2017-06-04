@@ -1,3 +1,4 @@
-Battles won: 33
+Battles won: 333
 Battles lost:0
 Won percentage: 100%
+Elapsed time: 2.3351336s

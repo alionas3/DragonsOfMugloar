@@ -11,9 +11,8 @@ type Weather struct{
 	Message string `xml:"message"`
 }
 
-func GetWeather(gameId int)(Weather) {
+func GetWeather(gameId int)(weather Weather) {
 	var(
-	    weather = Weather{}
 	    url     = "http://www.dragonsofmugloar.com/weather/api/report/" + strconv.Itoa(gameId)
 	)
 	response, error := http.Get(url)
@@ -22,5 +21,5 @@ func GetWeather(gameId int)(Weather) {
 	xmlData, error := ioutil.ReadAll(response.Body)
 	xml.Unmarshal([]byte(xmlData),&weather)
 	checkErr(error)
-	return weather
+	return
 }

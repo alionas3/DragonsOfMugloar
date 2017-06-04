@@ -19,7 +19,6 @@ func StartBattle() {
 	    totalBtls int = 0
 	    btlLost   int = 0
 	    dragon    string = ""
-	    cnt       int = 0
 	    btlWon    int = 0
 	    wg        sync.WaitGroup
 	)
@@ -45,6 +44,7 @@ func StartBattle() {
 			game := gamepkg.GetGame()
 			//gets battle weather
 			weather := gamepkg.GetWeather(game.GameId)
+			fmt.Println("game id:",game.GameId)
 			//creates dragon
 			dragon = gamepkg.CreateDragon(game, weather)
 			//resolves battle
@@ -54,16 +54,16 @@ func StartBattle() {
 			}else{
 				btlWon++
 			}
-			cnt++
 			bar.Increment()
 		}()
+		time.Sleep(time.Millisecond*2)//because of the server failing to handle 1000 requests at the same time
 	}
 	wg.Wait()//waits for all go routines to finish
 	bar.FinishPrint("All Battles Finished!")
 	elapsed := time.Since(start)//gets the elapsed time of go routines
 	gamepkg.LogStatistics(btlWon,btlLost,totalBtls,elapsed)
-	buf := bufio.NewReader(os.Stdin)
 	fmt.Print("Press ENTER to exit...")
+	buf := bufio.NewReader(os.Stdin)
 	sentence, err := buf.ReadBytes('\n')
 	if err != nil {
 		fmt.Println(err)
