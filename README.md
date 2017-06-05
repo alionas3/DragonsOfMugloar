@@ -35,7 +35,7 @@ go run src\dragonsofmugloar\main.go
 
 <h3><b>How should i play the game?</b></h3>
 
-After launching the game, it will ask you a question, how much battles do you wish to fight?. Att his point you should enter a whole number, as you can see I've enter 200 battles, after that hit ENTER.
+After launching the game, it will ask you a question, how much battles do you wish to fight?. At his point you should enter a whole number, as you can see I've enter 200 battles, after that hit ENTER.
 
 ![Alt text](http://i.imgur.com/RnLV7L8.png)
 
