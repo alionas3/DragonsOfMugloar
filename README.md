@@ -53,7 +53,7 @@ This output is saved in text file *BattleOfMugloarResult.txt* which could be fou
 
 <h3><b>Errors</b></h3>
 
-If you will enter something else, but not a number(when the program is launched for a first time) you will receive an error and program will exit.
+If you will enter something else, but not a number(when the program is launched for the first time) you will receive an error and program will exit.
 
 ![Alt text](http://i.imgur.com/bAdzd2c.png)
 
