@@ -1,16 +1,18 @@
 package gamepkg
 
 import (
-	"strconv"
-	"net/http"
 	"bytes"
-	"io/ioutil"
 	"encoding/json"
+	"io/ioutil"
+	"net/http"
+	"strconv"
 )
-type Result struct{
+
+type Result struct {
 	Status  string `json:"status"`
 	Message string `json:"message"`
 }
+
 /*
   This function calls solution api and solves the battle
   %param dragon - string, parsed dragon json
@@ -18,13 +20,13 @@ type Result struct{
   #returns: Status - string, status of the resolved bttle
   	    Message - string, message of the resolved battle
 */
-func ResolveBattle(dragon string, gameId int)(string, string){
-	var(
-	    result     = Result{}
-	    url        = "http://www.dragonsofmugloar.com/api/game/"+strconv.Itoa(gameId)+"/solution"
-	    jsonDragon = []byte(dragon)
+func ResolveBattle(dragon string, gameId int) (string, string) {
+	var (
+		result     = Result{}
+		url        = solutionUrl + strconv.Itoa(gameId) + "/solution"
+		jsonDragon = []byte(dragon)
 	)
-	req, error := http.NewRequest("PUT", url,bytes.NewBuffer(jsonDragon))
+	req, error := http.NewRequest("PUT", url, bytes.NewBuffer(jsonDragon))
 	checkErr(error)
 	req.Header.Set("Content-Type", "application/json")
 	client := &http.Client{}
@@ -32,7 +34,7 @@ func ResolveBattle(dragon string, gameId int)(string, string){
 	checkErr(error)
 	defer resp.Body.Close()
 	jsonData, error := ioutil.ReadAll(resp.Body)
-	json.Unmarshal([]byte(jsonData),&result)
+	json.Unmarshal([]byte(jsonData), &result)
 	checkErr(error)
 	return result.Status, result.Message
 }

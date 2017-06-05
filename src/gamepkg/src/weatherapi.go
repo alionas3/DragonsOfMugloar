@@ -1,25 +1,26 @@
 package gamepkg
 
 import (
-	"strconv"
-	"net/http"
-	"io/ioutil"
 	"encoding/xml"
+	"io/ioutil"
+	"net/http"
+	"strconv"
 )
-type Weather struct{
+
+type Weather struct {
 	Code    string `xml:"code"`
 	Message string `xml:"message"`
 }
 
-func GetWeather(gameId int)(weather Weather) {
-	var(
-	    url     = "http://www.dragonsofmugloar.com/weather/api/report/" + strconv.Itoa(gameId)
+func GetWeather(gameId int) (weather Weather) {
+	var (
+		url = weatherUrl + strconv.Itoa(gameId)
 	)
 	response, error := http.Get(url)
 	checkErr(error)
 	defer response.Body.Close()
 	xmlData, error := ioutil.ReadAll(response.Body)
-	xml.Unmarshal([]byte(xmlData),&weather)
+	xml.Unmarshal([]byte(xmlData), &weather)
 	checkErr(error)
 	return
 }
