@@ -24,7 +24,6 @@ Before entering the battle you should know that the weather in our kingdom can b
 <br />**Fog** - All dragons come with excellent knight-locating skills, no puny fog can change that. The knights dragon-locating skills, however are limited to understanding whether or not they have already been eaten.
 
 <h3><b>What should I do to start the game?</b></h3>
-<br>
 
 Firstly you should install GO into your machine, click this [link](https://golang.org/doc/install) to do that.After instalation is completed, open your cmd or terminal and execute the following commands:
 
@@ -33,3 +32,12 @@ go get github.com/alionas3/DragonsOfMugloar
 go build DragonsOfMugloar
 go run src\dragonsofmugloar\main.go
 ```
+
+<h3><b>How should i play the game?</b></h3>
+
+After launching the game, it will ask you a question, how much battles do you wish to fight?. Att his point you should enter a whole number, as you can see I've enter 200 battles, after that hit ENTER.
+
+![Alt text](http://i.imgur.com/RnLV7L8.png)
+
+
+
