@@ -14,7 +14,7 @@ Claw sharpness
 Wing strength
 Fire breath
 ```
-<h3><b>That sounds easy, lets get started!!!</b></h3>
+<h3><b>Game Marks:</b></h3>
 
 Before entering the battle you should know that the weather in our kingdom can be pretty hectic, so keep in mind couple of things:
 <br />**Normal weather** - normal fights
@@ -24,12 +24,12 @@ Before entering the battle you should know that the weather in our kingdom can b
 <br />**Fog** - All dragons come with excellent knight-locating skills, no puny fog can change that. The knights dragon-locating skills, however are limited to understanding whether or not they have already been eaten.
 
 <h3><b>What should I do to start the game?</b></h3>
-<br />Firstly you should install GO into your machine(I will assume that you already did that).
-then execute the following commands:
- 
+<br>
+
+Firstly you should install GO into your machine, click this [link](https://golang.org/doc/install) to do that.After instalation is completed, open your cmd or terminal and execute the following commands:
+
 ```javascript
 go get github.com/alionas3/DragonsOfMugloar
 go build DragonsOfMugloar
-go install DragonsOfMugloar
+go run src\dragonsofmugloar\main.go
 ```
-Have Fun!!!
