@@ -39,15 +39,19 @@ After launching the game, it will ask you a question, how much battles do you wi
 
 ![Alt text](http://i.imgur.com/RnLV7L8.png)
 
-After all battles finnished you will receive an output:
+After all battles are finnished, you will receive an output:
 
 ![Alt text](http://i.imgur.com/xDTV1sc.png)
 
 *progress bar - shows how much battles left<br>
 *Battles won - shows how much battles did you managed to win<br>
 *Battles lost - shows how much battles did you lost<br>
-*Won percentage - shows how much battles did you win in percents<br>
+*Won percentage - shows how much battles did you won in percents<br>
 *Elapsed time - shows how much time did it take to fight all the battles (at this point it took 1,7 seconds)
+
+This output is saved in text file *BattleOfMugloarResult.txt* which could be found in your game directory
+
+<h3><b>Errors</b></h3>
 
 If you will enter something else, but not a number, you will receive an error and program will exit.
 
