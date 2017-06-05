@@ -49,11 +49,11 @@ After all battles are finnished, you will receive an output:
 *Won percentage - shows how much battles did you won in percents<br>
 *Elapsed time - shows how much time did it take to fight all the battles (at this point it took 1,7 seconds)
 
-This output is saved in text file *BattleOfMugloarResult.txt* which could be found in your game directory
+This output is saved in text file *BattleOfMugloarResult.txt* which could be found in your game directory.
 
 <h3><b>Errors</b></h3>
 
-If you will enter something else, but not a number, you will receive an error and program will exit.
+If you will enter something else, but not a number(when the program is launched for a first time) you will receive an error and program will exit.
 
 ![Alt text](http://i.imgur.com/bAdzd2c.png)
 
