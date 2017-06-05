@@ -39,5 +39,9 @@ After launching the game, it will ask you a question, how much battles do you wi
 
 ![Alt text](http://i.imgur.com/RnLV7L8.png)
 
+If you will enter something else, but nor a number, you will receive and error and program will exit.
+
+![Alt text](http://i.imgur.com/bAdzd2c.png)
+
 
 
