@@ -57,9 +57,14 @@ If you will enter something else, but not a number(when the program is launched 
 
 ![Alt text](http://i.imgur.com/bAdzd2c.png)
 
+<h3><b>Testing</b></h3>
+
+This game has 2 test, first test checks dragon skills assigment and also check if he wins with the assigned points, second one tests the weatherapi. To run the test you need to go to the following path:```../DragonsOfMugloar/src/gamepkg/src``` and execute the following command:
+```javascript
+go test
+```
+
+If all goes well you should get these results:
 
 
-
-
-
-
+![Alt text](http://i.imgur.com/h3JVSZZ.png)
