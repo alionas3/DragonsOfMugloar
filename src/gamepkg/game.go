@@ -1,11 +1,9 @@
 package gamepkg
 
 import (
-	"bufio"
 	"fmt"
 	"gamepkg/src"
 	"github.com/cheggaaa/pb"
-	"os"
 	"sync"
 	"time"
 )
@@ -26,7 +24,8 @@ func StartBattle() {
 	fmt.Print("How many battles would you like to play?:")
 	_, error := fmt.Scanf("%d", &totalBtls)
 	if error != nil {
-		fmt.Println("Please enter valid battle number.")
+		fmt.Println("Please enter a valid battle number, program now will exit...")
+		return
 	}
 	bar := pb.StartNew(totalBtls)
 	bar.ShowBar = true
@@ -63,6 +62,4 @@ func StartBattle() {
 	bar.FinishPrint("All Battles Finished!")
 	elapsed := time.Since(start) //gets the elapsed time of go routines
 	gamepkg.LogStatistics(btlWon, btlLost, totalBtls, elapsed)
-	fmt.Print("Press ENTER to exit...")
-	bufio.NewReader(os.Stdin)
 }

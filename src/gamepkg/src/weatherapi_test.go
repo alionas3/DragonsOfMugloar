@@ -4,6 +4,8 @@ import "testing"
 /*
 This function will test weather api
 */
+
+
 func TestGetWeather(t *testing.T) {
 	var (
 		wantWeather string = "NMR"
