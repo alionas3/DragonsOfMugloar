@@ -29,6 +29,7 @@ Firstly you should install GO into your machine, click this [link](https://golan
 
 ```javascript
 go get github.com/alionas3/DragonsOfMugloar
+go install DragonsOfMugloar
 go build DragonsOfMugloar
 go run src\dragonsofmugloar\main.go
 ```
