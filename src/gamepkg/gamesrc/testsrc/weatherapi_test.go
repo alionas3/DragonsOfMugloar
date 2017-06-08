@@ -1,7 +1,8 @@
 package gamepkg
 
-import ("testing"
+import (
 	"gamepkg/gamesrc"
+	"testing"
 )
 
 /*

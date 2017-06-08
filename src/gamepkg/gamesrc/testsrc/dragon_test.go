@@ -2,8 +2,8 @@ package gamepkg
 
 import (
 	"encoding/json"
-	"testing"
 	"gamepkg/gamesrc"
+	"testing"
 )
 
 /*
