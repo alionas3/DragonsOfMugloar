@@ -25,8 +25,8 @@ Before entering the battle you should know that the weather in our kingdom can b
 
 <h3><b>What should I do to start the game?</b></h3>
 
-*Firstly install go, click this [link](https://golang.org/doc/install) to do that.
-*Secondly install glide (fir third party vendoring), click  [link](https://github.com/Masterminds/glide) to do that.
+*Firstly install go, click this [link](https://golang.org/doc/install) to do that.<br>
+*Secondly install glide (for third party vendoring), click  [link](https://github.com/Masterminds/glide) to do that.<br>
 
 After the instalations is completed, open your cmd or terminal and execute the following commands:
 
