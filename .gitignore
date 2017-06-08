@@ -1,5 +1,9 @@
 bin/
 .idea/
 pkg/
+vendor/
+src/github.com/
+src/src.exe
 BattleOfMugloarResult.txt
 DragonsOfMugloar.exe
+glide.lock
