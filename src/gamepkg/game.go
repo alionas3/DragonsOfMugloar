@@ -2,10 +2,10 @@ package gamepkg
 
 import (
 	"fmt"
-	"gamepkg/src"
+	"gamepkg/gamesrc"
+	"github.com/cheggaaa/pb"
 	"sync"
 	"time"
-	"github.com/cheggaaa/pb"
 )
 
 /*
@@ -15,10 +15,10 @@ import (
 */
 func StartBattle() {
 	var (
-		totalBtls int
-		btlLost   int
-		btlWon    int
-		wg        sync.WaitGroup
+		totalBtls     int
+		btlLost       int
+		btlWon        int
+		wg            sync.WaitGroup
 		resultChannel chan string = make(chan string)
 	)
 	fmt.Print("How many battles would you like to play?:")
@@ -46,7 +46,7 @@ func StartBattle() {
 			//creates dragon
 			dragon := gamepkg.CreateDragon(game, weather)
 			//resolves battle
-			status,_ := gamepkg.ResolveBattle(dragon, game.GameId)
+			status, _ := gamepkg.ResolveBattle(dragon, game.GameId)
 			//assigns the game status to result channel
 			resultChannel <- status
 		}(resultChannel)

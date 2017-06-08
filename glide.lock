@@ -1,36 +1,22 @@
-hash: 12d63273ef60cda2afdbbc25c4795ea26409945e0e969fda55a95f97855a1069
-updated: 2017-06-06T00:34:45.5838538+03:00
+hash: aaa3b3279ab7b606fb865474b776c7b810c9bcd1b72e763951fa7c15db260448
+updated: 2017-06-08T23:11:00.2966459+03:00
 imports:
 - name: github.com/cheggaaa/pb
   version: 4a1bf7a97d1348c5b50aabf6e1eb0496ca0a3d33
-- name: github.com/codegangsta/cli
-  version: d70f47eeca3afd795160003bc6e28b001d60c67c
-- name: github.com/Masterminds/semver
-  version: abff1900528dbdaf6f3f5aa92c398be1eaf2a9f7
-- name: github.com/Masterminds/vcs
-  version: 3084677c2c188840777bff30054f2b553729d329
-- name: github.com/mitchellh/go-homedir
-  version: b8bc1bf767474819792c23f32d8286a45736f1c6
-- name: github.com/tredoe/term
-  version: e551c64f56c0ac0469b4db1b70918e05bfd3ab20
-  subpackages:
-  - readline
-  - sys
-- name: golang.org/x/sys
-  version: e24f485414aeafb646f6fca458b0bf869c0880a1
-  subpackages:
-  - unix
-- name: gopkg.in/yaml.v2
-  version: cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b
 testImports:
 - name: github.com/fatih/color
-  version: 62e9147c64a1ed519147b62a56a14e83e2be02c1
+  version: 570b54cabe6b8eb0bc2dfce68d964677d63b5260
 - name: github.com/mattn/go-colorable
-  version: 5411d3eea5978e6cdc258b30de592b60df6aba96
+  version: d228849504861217f796da67fae4f6e347643f15
 - name: github.com/mattn/go-isatty
   version: 57fdcb988a5c543893cc61bce354a6e24ab70022
   repo: https://github.com/mattn/go-isatty
 - name: github.com/mattn/go-runewidth
   version: 97311d9f7767e3d6f422ea06661bc2c7a19e8a5d
+- name: golang.org/x/sys
+  version: e24f485414aeafb646f6fca458b0bf869c0880a1
+  repo: https://go.googlesource.com/sys
+  subpackages:
+  - unix
 - name: gopkg.in/cheggaaa/pb.v1
-  version: f6ccf2184de4dd34495277e38dc19b6e7fbe0ea2
+  version: 4a1bf7a97d1348c5b50aabf6e1eb0496ca0a3d33

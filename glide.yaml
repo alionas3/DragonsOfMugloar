@@ -1,20 +1,11 @@
 package: .
 import:
-- package: github.com/Masterminds/semver
-- package: github.com/Masterminds/vcs
-- package: github.com/codegangsta/cli
-- package: github.com/mitchellh/go-homedir
-- package: github.com/tredoe/term
-  subpackages:
-  - readline
-  - sys
-- package: golang.org/x/sys
-  subpackages:
-  - unix
-- package: gopkg.in/yaml.v2
 - package: github.com/cheggaaa/pb
-  version: v2.0.4
+  version: ^2.0.4
 testImport:
 - package: github.com/fatih/color
+  version: ^1.5.0
 - package: github.com/mattn/go-colorable
+  version: ^0.0.7
 - package: gopkg.in/cheggaaa/pb.v1
+  version: ^2.0.4
