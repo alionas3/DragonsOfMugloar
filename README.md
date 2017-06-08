@@ -35,24 +35,24 @@ go get github.com/alionas3/DragonsOfMugloar
 glide install
 go install DragonsOfMugloar
 go build DragonsOfMugloar
-go run src\dragonsofmugloar\main.go
+go run src/main.go
 ```
 
 <h3><b>How should i play the game?</b></h3>
 
 After launching the game, it will ask you a question, how much battles do you wish to fight?. At his point you should enter a whole number, as you can see I've enter 200 battles, after that hit ENTER.
 
-![Alt text](http://i.imgur.com/RnLV7L8.png)
+![Alt text](http://i.imgur.com/zbtNEcr.png)
 
 After all battles are finnished, you will receive an output:
 
-![Alt text](http://i.imgur.com/xDTV1sc.png)
+![Alt text](http://i.imgur.com/j1b3YWn.png)
 
 *progress bar - shows how much battles left<br>
 *Battles won - shows how much battles did you managed to win<br>
 *Battles lost - shows how much battles did you lost<br>
 *Won percentage - shows how much battles did you won in percents<br>
-*Elapsed time - shows how much time did it take to fight all the battles (at this point it took 1,7 seconds)
+*Elapsed time - shows how much time did it take to fight all the battles (at this point it took 1,2 seconds)
 
 This output is saved in text file *BattleOfMugloarResult.txt* which could be found in your game directory.
 
@@ -60,11 +60,12 @@ This output is saved in text file *BattleOfMugloarResult.txt* which could be fou
 
 If you will enter something else, but not a number(when the program is launched for the first time) you will receive an error and program will exit.
 
-![Alt text](http://i.imgur.com/bAdzd2c.png)
+![Alt text](http://i.imgur.com/lIflQkt.png)
 
 <h3><b>Testing</b></h3>
 
-This game has 2 test, first test checks dragon skills assigment and also check if he wins with the assigned points, second one tests the weatherapi. To run the test you need to go to the following path:```../DragonsOfMugloar/src/gamepkg/src``` and execute the following command:
+This game has 2 test, first test checks dragon skills assigment and also check if he wins with the assigned points, second one tests the weatherapi. To run the test you need to go to the following path:```../DragonsOfMugloar\src\gamepkg\gamesrc\testsrc``` and execute the following command:
+
 ```javascript
 go test
 ```
@@ -72,4 +73,4 @@ go test
 If all goes well you should get these results:
 
 
-![Alt text](http://i.imgur.com/h3JVSZZ.png)
+![Alt text](http://i.imgur.com/98Y1wt4.png)
