@@ -25,10 +25,14 @@ Before entering the battle you should know that the weather in our kingdom can b
 
 <h3><b>What should I do to start the game?</b></h3>
 
-Firstly you should install GO into your machine, click this [link](https://golang.org/doc/install) to do that.After instalation is completed, open your cmd or terminal and execute the following commands:
+*Firstly install go, click this [link](https://golang.org/doc/install) to do that.
+*Secondly install glide (fir third party vendoring), click  [link](https://github.com/Masterminds/glide) to do that.
+
+After the instalations is completed, open your cmd or terminal and execute the following commands:
 
 ```javascript
 go get github.com/alionas3/DragonsOfMugloar
+glide install
 go install DragonsOfMugloar
 go build DragonsOfMugloar
 go run src\dragonsofmugloar\main.go
